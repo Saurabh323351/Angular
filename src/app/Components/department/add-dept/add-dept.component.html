@@ -1,0 +1,16 @@
+
+   <h2 mat-dialog-title>Add Department</h2>
+   <mat-dialog-content>
+    <mat-form-field>
+    <mat-label>Department Name</mat-label>
+    <input matInput autocomplete="off" [formControl]="deptName">
+    <div *ngIf="deptName.touched" class="text-danger">
+        <p>Department Name Can't be empty</p>
+    </div>
+    </mat-form-field>
+   </mat-dialog-content>
+   <mat-dialog-actions>
+        <button mat-button  (click)="cancel()" tabindex="-1">Close</button>
+       <button mat-button mat-dialog-close (click)="createDept()">Create Department</button>
+      
+   </mat-dialog-actions>
